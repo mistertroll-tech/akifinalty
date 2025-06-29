@@ -111,7 +111,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('../assets/logos/aki-id.png') center/cover no-repeat;
+                        url('/assets/logos/aki-id.png') center/cover no-repeat;
             height: 200px;
             display: flex;
             align-items: center;
@@ -458,7 +458,7 @@
             
             // Load articles data
             function loadArticles() {
-                fetch('../data/artikel.json')
+                fetch('/data/artikel.json')
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Network response was not ok');
@@ -504,7 +504,7 @@
                     articleCard.innerHTML = `
                         <div class="article-image-container">
                             <img 
-                                src="../assets/artikel/${article.gambar || 'placeholder.jpg'}" 
+                                src="/assets/artikel/${article.gambar || 'placeholder.jpg'}" 
                                 alt="${article.judul}" 
                                 class="article-image"
                                 loading="lazy"
@@ -554,7 +554,7 @@
                 articlesGrid.innerHTML = `
                     <div class="error-state">
                         <p>Tidak ada artikel dalam kategori ini.</p>
-                        <a href="../seputar-AKI/" class="retry-button">Kembali ke Beranda</a>
+                        <a href="/seputar-AKI/" class="retry-button">Kembali ke Beranda</a>
                     </div>
                 `;
             }
@@ -593,4 +593,4 @@
         });
     </script>
 </body>
-</html>
+                        </html>
