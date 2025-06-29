@@ -111,7 +111,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('../assets/logos/aki-id.png') center/cover no-repeat;
+                        url('/assets/logos/aki-id.png') center/cover no-repeat;
             height: 200px;
             display: flex;
             align-items: center;
@@ -380,8 +380,8 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="/">Beranda</a></li>
                 <li><a href="/seputar-AKI/">Goresan AKI</a></li>
-                <li><a href="../personal/">Daftar Kampus</a></li>
-                <li><a href="../contact/">Hubungi Kami</a></li>
+                <li><a href="/personal/">Daftar Kampus</a></li>
+                <li><a href="/contact/">Hubungi Kami</a></li>
             </ul>
         </div>
     </nav>
@@ -430,7 +430,7 @@
             }
 
             // Load article data
-            fetch('../data/artikel.json')
+            fetch('/data/artikel.json')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Gagal memuat data artikel');
@@ -485,7 +485,7 @@
                         case 'image':
                             contentHTML += `
                                 <div class="article-image-container">
-                                    <img src="../assets/artikel/${item.value}" alt="${item.caption || 'Gambar artikel'}" class="article-image" loading="lazy">
+                                    <img src="/assets/artikel/${item.value}" alt="${item.caption || 'Gambar artikel'}" class="article-image" loading="lazy">
                                     ${item.caption ? `<p class="article-image-caption">${item.caption}</p>` : ''}
                                 </div>
                             `;
@@ -524,7 +524,7 @@
                     
                     ${article.gambar ? `
                     <div class="article-image-container">
-                        <img src="../assets/artikel/${article.gambar}" alt="${article.judul}" class="article-image" loading="lazy">
+                        <img src="/assets/artikel/${article.gambar}" alt="${article.judul}" class="article-image" loading="lazy">
                     </div>
                     ` : ''}
                     
@@ -532,7 +532,7 @@
                         ${contentHTML}
                     </div>
                     
-                    <a href="../seputar-AKI/" class="back-button">
+                    <a href="/seputar-AKI/" class="back-button">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M19 12H5M12 19l-7-7 7-7"/>
                         </svg>
@@ -547,7 +547,7 @@
                     <div class="error-container">
                         <h2>${message}</h2>
                         <p>Silakan cek kembali URL atau kunjungi halaman beranda kami.</p>
-                        <a href="../seputar-AKI/" class="back-button">
+                        <a href="/seputar-AKI/" class="back-button">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M19 12H5M12 19l-7-7 7-7"/>
                             </svg>
