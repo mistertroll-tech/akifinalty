@@ -107,7 +107,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('./assets/logos/aki-id.png') center/cover no-repeat;
+                        url('/assets/logos/aki-id.png') center/cover no-repeat;
             height: 200px;
             display: flex;
             align-items: center;
@@ -339,10 +339,10 @@
             </a>
             <button class="hamburger" id="hamburger">☰</button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index/">Beranda</a></li>
+                <li><a href="/">Beranda</a></li>
                  <li><a href="/seputar-AKI/">Goresan AKI</a></li>
-                <li><a href="personal/">Daftar Kampus</a></li>
-                <li><a href="contact/">Hubungi Kami</a></li>
+                <li><a href="/personal/">Daftar Kampus</a></li>
+                <li><a href="/contact/">Hubungi Kami</a></li>
             </ul>
         </div>
     </nav>
@@ -383,7 +383,7 @@
             });
 
             // Load articles data
-            fetch('./data/artikel.json')
+            fetch('/data/artikel.json')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -430,7 +430,7 @@
                     const categoryName = getCategoryName(category);
                     categoryTitle.innerHTML = `
                         <h2>${categoryName}</h2>
-                        <a href="./kategori/artikel-${category}/">Lihat Semua</a>
+                        <a href="/kategori/artikel-${category}/">Lihat Semua</a>
                     `;
                     
                     // Articles grid (show only 3-5 articles)
@@ -449,7 +449,7 @@
                         articleCard.innerHTML = `
                             <div class="article-image-container">
                                 <img 
-                                    src="./assets/artikel/${article.gambar || 'placeholder.jpg'}" 
+                                    src="/assets/artikel/${article.gambar || 'placeholder.jpg'}" 
                                     alt="${article.judul}" 
                                     class="article-image"
                                     loading="lazy"
@@ -463,7 +463,7 @@
                                     <span>${article.asalKampus}</span>
                                 </div>
                                 <p class="article-excerpt">${excerpt}</p>
-                                <a href="./artikel/?slug=${article.slug}" class="read-more">Baca Selengkapnya →</a>
+                                <a href="/artikel/?slug=${article.slug}" class="read-more">Baca Selengkapnya →</a>
                             </div>
                         `;
                         articlesGrid.appendChild(articleCard);
