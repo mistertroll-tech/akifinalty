@@ -57,6 +57,16 @@
       { "label": "Instagram", "link": "https://www.instagram.com/unshitper17" },
       { "label": "Donate", "link": "https://saweria.co/unshitper" }
     ]
+  },{
+  "slug": "unwhshitposting",
+  "namaKampus": "Universitas Wahid Hasyim Semarang",
+  "logo": "logo-unwhshitposting.png",
+  "namaMeme": "unwhshitposting",
+  "deskripsi": "Unofficialy Akun Shitposting Universitas Wahid Hasyim Semarang, Berbagi Seputar Akademik/Non, Sampangan - Gunung Pati",
+  "motto": "Aswaja Muda Mendunia",
+  "tombol": [
+    { "label": "Instagram", "link": "https://www.instagram.com/unwhshitposting" }
+  ]
   },
   {
     "slug": "polkestama",
